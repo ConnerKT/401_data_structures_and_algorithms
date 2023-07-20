@@ -17,6 +17,7 @@ namespace CodeChallenges
         Node.Next = Head;
         Head = Node;
       }
+
     }
     public bool includes(int data)
     {
