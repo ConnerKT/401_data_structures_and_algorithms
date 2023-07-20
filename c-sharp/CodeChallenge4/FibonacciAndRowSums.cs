@@ -11,7 +11,18 @@ namespace CodeChallenges
 
         public static int[] RowSums(int[][] matrix)
         {
-            int[] rowSums = new int[matrix[0].Length];
+            int[] rowSums = new int[matrix.Length];
+
+        for (int i =0; i < matrix.Length;i++)
+      {
+        int sum = 0;
+          for (int k = 0; k < matrix[i].Length;k++)
+          {
+            sum += matrix[i][k];
+          }
+          rowSums[i] = sum;
+        }
+            
             return rowSums;
         }
 
