@@ -2,7 +2,7 @@ namespace CodeChallenges
 {
     public class InsertableLinkedList: LinkedList
     {
-
+      public Node Head { get; set; }
         //adds a new node with the given value to the end of the list
         public void Append(int value)
         {
@@ -16,7 +16,7 @@ namespace CodeChallenges
         //adds a new node with the given new value immediately after the first node that has the value specified
         public void InsertAfter(int value, int valueToInsert)
         {
-            
+         
         }
     }
 }
