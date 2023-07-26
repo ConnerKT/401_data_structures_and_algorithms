@@ -4,22 +4,23 @@ namespace CodeChallenges
   {
     public Node Head { get; set; }
 
-    public void insert(int data)
+    public void Insert(int value)
     {
       //Adds a new node with that value to the head of the
-      Node Node = new Node(data);
+      Node Node = new Node(value);
 
-      if(Head == null)
+      if (Head == null)
       {
         Head = Node;
-      }else
+      }
+      else
       {
         Node.Next = Head;
         Head = Node;
       }
 
     }
-    public bool includes(int data)
+    public bool Includes(int value)
     {
       //returns true if that value exists as a node's value somewhere within the list
       //We have to check every element in the list
@@ -27,9 +28,9 @@ namespace CodeChallenges
 
       Node currentNode = Head;
 
-      while(currentNode != null)
+      while (currentNode != null)
       {
-        if (currentNode.Data == data)
+        if (currentNode.Value == value)
         {
           result = true;
           break;
@@ -46,7 +47,7 @@ namespace CodeChallenges
 
       while (currentNode != null)
       {
-        liststring += String.Format("{0} -> ", currentNode.Data);
+        liststring += String.Format("{0} -> ", currentNode.Value);
         currentNode = currentNode.Next;
       }
 
@@ -56,12 +57,12 @@ namespace CodeChallenges
 
   public class Node
   {
-    public int Data;
-    public Node Next;
+    public int Value { get; set; }
+    public Node Next { get; set; }
 
-    public Node(int data)
+    public Node(int value)
     {
-      Data = data;
+      Value = value;
       Next = null;
     }
   }
