@@ -3,12 +3,15 @@ namespace CodeChallenges
   public class LinkedList
   {
     public Node Head { get; set; }
+    public Node Tail { get; set; }
+    public Node CurrentNode { get; set; }
 
     public void Insert(int value)
+
     {
       //Adds a new node with that value to the head of the
       Node Node = new Node(value);
-
+        
       if (Head == null)
       {
         Head = Node;
@@ -59,6 +62,7 @@ namespace CodeChallenges
   {
     public int Value { get; set; }
     public Node Next { get; set; }
+    public Node Last { get; set; }
 
     public Node(int value)
     {
